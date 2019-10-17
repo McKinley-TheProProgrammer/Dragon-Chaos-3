@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
 
-    float velocity = 100f;
+    float velocity = 136f;
     float jumpForce = 400f;
     Rigidbody2D body;
     Animator anim;

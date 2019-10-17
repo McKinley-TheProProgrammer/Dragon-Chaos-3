@@ -14,8 +14,8 @@ public class FollowTarget : MonoBehaviour
     public float raioDoCanto;
     public LayerMask whereIsEdge;
     public bool isOnGround;
-
-
+    bool isAttacking;
+    public EnemyAttack atackscript;
     int enemyRange = 50;
     public Transform player;
 
@@ -43,6 +43,10 @@ public class FollowTarget : MonoBehaviour
             {
                 flipa.flipX = false;
             }
+            if (isAttacking)
+            {
+                return;
+            }
             //Debug.Log("The Fim");
             if(CheckRange() && isOnGround)
             {
@@ -65,5 +69,14 @@ public class FollowTarget : MonoBehaviour
     {
         return Vector2.Distance(transform.position, player.position) < enemyRange;
     }
-
+    public void StartAttack()
+    {
+        atackscript.TurnColliderOn();
+        isAttacking = true;
+    }
+    public void StopAttack()
+    {
+        atackscript.TurnColliderOff();
+        isAttacking = false;
+    }
 }

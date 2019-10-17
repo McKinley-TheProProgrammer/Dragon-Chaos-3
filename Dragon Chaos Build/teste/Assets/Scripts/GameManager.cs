@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
-
+    public GameObject player,spawn;
     public GameObject camera;
     public AudioClip death;
 
@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //player.SetActive(true);
+        //Instantiate(player, spawn.transform.position, Quaternion.identity);
     }
     
 

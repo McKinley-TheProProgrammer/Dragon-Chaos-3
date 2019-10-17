@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20799347}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Inimigos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ Transform:
   m_Children:
   - {fileID: 1376427730}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43348820
 GameObject:
@@ -454,7 +454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &55256545
 PolygonCollider2D:
@@ -549,7 +549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &67895491 stripped
 GameObject:
@@ -568,6 +568,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Guarda (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
@@ -631,6 +636,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -707,7 +717,7 @@ Transform:
   m_Children:
   - {fileID: 447869241}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94995243
 GameObject:
@@ -838,9 +848,7 @@ MonoBehaviour:
   textoNome: {fileID: 2055422457}
   textoDialogo: {fileID: 575358569}
   player: {fileID: 848122768}
-  numerodeNPCs:
-  - {fileID: 1655804198}
-  - {fileID: 1515192017}
+  quemFala: {fileID: 0}
   npcPoint: 0
 --- !u!1 &103272808
 GameObject:
@@ -998,7 +1006,7 @@ Transform:
   m_LocalScale: {x: 4.374725, y: 4.374725, z: 4.374725}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172538623
 GameObject:
@@ -1255,6 +1263,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1314,6 +1327,11 @@ PrefabInstance:
       propertyPath: range
       value: 
       objectReference: {fileID: 398197224}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!4 &222605332 stripped
@@ -2096,7 +2114,7 @@ Transform:
   - {fileID: 1826487636}
   - {fileID: 1818055913}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366440859
 GameObject:
@@ -2625,18 +2643,18 @@ MonoBehaviour:
   m_LookaheadTime: 0.4
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1.9
+  m_XDamping: 0
   m_YDamping: 0
-  m_ZDamping: 1
+  m_ZDamping: 0
   m_ScreenX: 0.51
   m_ScreenY: 0.64
   m_CameraDistance: 11
-  m_DeadZoneWidth: 0.18
-  m_DeadZoneHeight: 0.13
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.62
-  m_SoftZoneHeight: 0.59
+  m_SoftZoneWidth: 0
+  m_SoftZoneHeight: 0
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -2941,7 +2959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.326828, y: -3.5243523, z: -11}
+  m_LocalPosition: {x: -7.326828, y: -3.5243516, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41344,6 +41362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba38edfa94da954b91106b49b3626e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 848122768}
+  spawn: {fileID: 930750751}
   camera: {fileID: 85195156}
   death: {fileID: 8300000, guid: 2369e47161f9a0c42a3ff1eb04c9104c, type: 3}
 --- !u!82 &584156092
@@ -41571,7 +41591,7 @@ PrefabInstance:
     - target: {fileID: 6275711227336467016, guid: aa42156bdc63ba848b66c8a0a2c6ac01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6275711227336467016, guid: aa42156bdc63ba848b66c8a0a2c6ac01,
         type: 3}
@@ -41660,6 +41680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41723,6 +41748,11 @@ PrefabInstance:
       propertyPath: pararDist
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!4 &687266184 stripped
@@ -41742,6 +41772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Guarda (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
@@ -41805,6 +41840,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -42142,6 +42182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -42205,6 +42250,11 @@ PrefabInstance:
       propertyPath: pararDist
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!4 &781403372 stripped
@@ -42230,6 +42280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Guarda (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
@@ -42293,6 +42348,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -42459,7 +42519,7 @@ Transform:
   m_Children:
   - {fileID: 233647596}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839173177
 GameObject:
@@ -42738,7 +42798,7 @@ RectTransform:
   - {fileID: 575358568}
   - {fileID: 529560004}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -42823,6 +42883,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 358203075}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &930750751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 930750752}
+  m_Layer: 0
+  m_Name: PlayerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &930750752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930750751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.25, y: -4.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932155806 stripped
 GameObject:
@@ -43131,12 +43221,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996735177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.412498, y: -3.518, z: -11}
+  m_LocalPosition: {x: -9.4124975, y: -3.518, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436889771}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &996735180
 MonoBehaviour:
@@ -43513,6 +43603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43575,6 +43670,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -52641,6 +52741,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52704,6 +52809,11 @@ PrefabInstance:
       propertyPath: pararDist
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!4 &1349878294 stripped
@@ -52727,7 +52837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376427730}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Guardas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53050,7 +53160,7 @@ Transform:
   - {fileID: 1289739340}
   - {fileID: 288689269}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497639017
 GameObject:
@@ -53281,12 +53391,11 @@ MonoBehaviour:
   butao: {fileID: 529560003}
   dialogo:
     nome: PLACA
-    sentencas:
-    - "(CASTELO DE APL\xCDSTIA)"
   player: {fileID: 848122768}
   podeFalar: 0
   saiuDoCampo: 0
   cineActive: 0
+  npcIdentifier: 0
 --- !u!1 &1526295648
 GameObject:
   m_ObjectHideFlags: 0
@@ -53536,6 +53645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53610,6 +53724,11 @@ PrefabInstance:
       propertyPath: range
       value: 
       objectReference: {fileID: 67895491}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!4 &1558069781 stripped
@@ -53833,7 +53952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582311325
 GameObject:
@@ -54011,6 +54130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54073,6 +54197,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -54365,27 +54494,11 @@ MonoBehaviour:
   butao: {fileID: 529560003}
   dialogo:
     nome: Senhora e Morgana
-    sentencas:
-    - "Ah! Finalmente voc\xEA acordou! Tem uns 7 dias que tu ta dormindo a\xED."
-    - O que houve?
-    - Preciso voltar para o Castelo, Vossa Majestade precisa de mim!!
-    - "Minha filha, a \xFAnica coisa de que tu precisa \xE9 descansar. Quanto ao castelo...
-      Eu num sei o que c\xEA t\xE1 falando."
-    - Aonde estamos?
-    - "Esta \xE9 a vila Vooeid\xED."
-    - (Merda... fica um pouco longe do castelo.)
-    - "Voc\xEA j\xE1 est\xE1 melhor?"
-    - "N\xE3o muito, mas n\xE3o posso enrolar mais aqui. Muito obrigada pela sua boa
-      vontade, senhora!H\xE1 algo que eu possa fazer para retribuir?"
-    - "Agora que c\xEA falou... tem sim. Tem uns guarda, de n\xE3o sei onde, na vila.
-      Eles t\xE3o tentando invadir, e quem n\xE3o obedecer, perde a cabe\xE7a. Se
-      voc\xEA matar esses nojento, a vila toda agradece. "
-    - "(Covardes... matar alde\xF5es sem motivo at\xE9 parece ser coisa dos Sk\xF3nenses.)"
-    - (Muito bem, verei o que posso fazer.)
   player: {fileID: 848122768}
   podeFalar: 0
   saiuDoCampo: 0
   cineActive: 0
+  npcIdentifier: 0
 --- !u!1 &1670987110
 GameObject:
   m_ObjectHideFlags: 0
@@ -54418,7 +54531,7 @@ Transform:
   - {fileID: 239002243}
   - {fileID: 1515192015}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676983736
 GameObject:
@@ -54596,6 +54709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54659,6 +54777,11 @@ PrefabInstance:
       propertyPath: pararDist
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!4 &1756955852 stripped
@@ -54717,7 +54840,7 @@ PrefabInstance:
     - target: {fileID: 6275711227336467016, guid: aa42156bdc63ba848b66c8a0a2c6ac01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6275711227336467016, guid: aa42156bdc63ba848b66c8a0a2c6ac01,
         type: 3}
@@ -55034,6 +55157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55096,6 +55224,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -55580,7 +55713,7 @@ Transform:
   - {fileID: 1739151480}
   - {fileID: 1982359985}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1921197160
 GameObject:
@@ -55878,6 +56011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55940,6 +56078,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -56371,7 +56514,7 @@ Transform:
   m_LocalScale: {x: 16.62625, y: 6.9568095, z: 1.5830001}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2001181071
 SpriteRenderer:
@@ -56591,6 +56734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56653,6 +56801,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -56753,6 +56906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56815,6 +56973,11 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: pararDist
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
@@ -57060,15 +57223,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guarda
       objectReference: {fileID: 0}
+    - target: {fileID: 7468083058895997858, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.84341
+      value: -87.93
       objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.16
+      value: -13.57
       objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482317, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
@@ -57119,7 +57287,37 @@ PrefabInstance:
       propertyPath: seguirAlvo
       value: 
       objectReference: {fileID: 848122771}
-    m_RemovedComponents: []
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: velocidade
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: recuarDist
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394267730, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.233
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394267732, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394267731, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemies.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394267733, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1394267733, guid: edae3240de1e35845ad506668eb17167, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: edae3240de1e35845ad506668eb17167, type: 3}
 --- !u!1001 &6275711227530762292
 PrefabInstance:
@@ -57171,7 +57369,7 @@ PrefabInstance:
     - target: {fileID: 6275711227336467016, guid: aa42156bdc63ba848b66c8a0a2c6ac01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6275711227336467016, guid: aa42156bdc63ba848b66c8a0a2c6ac01,
         type: 3}
