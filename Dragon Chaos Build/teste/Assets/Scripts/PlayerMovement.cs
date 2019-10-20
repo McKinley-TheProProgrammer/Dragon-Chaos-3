@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public AudioClip birds;
-
+    public AudioClip walking,jumping,landing;
     float velocity = 4.5f;
     float jumpForce = 400f;
     Rigidbody2D body;
@@ -48,7 +48,10 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground_Grass")
+        {
+            GameManager.Instance.SfxPlayer(landing);
             isOnLand = true;
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -66,6 +69,18 @@ public class PlayerMovement : MonoBehaviour
         {
             body.isKinematic = false;
         }
+    }*/
+    public void WalkingSfx()
+    {
+        GameManager.Instance.SfxPlayer(walking);
+    }
+    public void JumpingSfx()
+    {
+        GameManager.Instance.SfxPlayer(jumping);
+    }
+    /*public void LandingSfx()
+    {
+        GameManager.Instance.SfxPlayer(landing);
     }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {

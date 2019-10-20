@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class AttackMechanic : MonoBehaviour
 {
+    public AudioClip slash,killGuard;
     public Image barraDeAdrenalina;
     public Animator anim;
+    //public Animation attack;
     float enemyDamage;
     public BoxCollider2D colisorDireita;
     public BoxCollider2D colisorEsquerda;
@@ -14,26 +16,36 @@ public class AttackMechanic : MonoBehaviour
     public string strongerEnemyTag;
     int danoSET = 3;
     public ParticleSystem enemyTraces;
+    bool canAttack;
     // Start is called before the first frame update
     void Start()
     {
         colisorDireita.enabled = false;
         colisorEsquerda.enabled = false;
         barraDeAdrenalina.fillAmount = 0f;
+        canAttack = true;
         //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && canAttack)
+        {
             anim.SetTrigger("Attack");
+            canAttack = false;
+            if (anim.isInitialized)
+            {
+                canAttack = true;
+            }
+        }
         
         
     }
    
     public void TurnColliderOn()
     {
+        GameManager.Instance.SfxPlayer(slash);
         if (gameObject.GetComponentInParent<SpriteRenderer>().flipX == true)
             colisorDireita.enabled = true;
         if (gameObject.GetComponentInParent<SpriteRenderer>().flipX == false)
@@ -57,7 +69,7 @@ public class AttackMechanic : MonoBehaviour
 
             //collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             //collision.gameObject.GetComponent<BoxCollider2D>().enabled = true;
-
+            GameManager.Instance.SfxPlayer(killGuard);
             iTween.PunchScale(collision.gameObject,new Vector2(6,8),1);
             iTween.ColorTo(collision.gameObject,new Color(0,0,0,0),.5f);
             collision.gameObject.GetComponentInChildren<EnemyAttack>().enabled = false;

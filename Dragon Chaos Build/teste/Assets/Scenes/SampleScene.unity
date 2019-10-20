@@ -3077,7 +3077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.326828, y: -3.5243516, z: -11}
+  m_LocalPosition: {x: -7.326833, y: -3.525874, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44090,7 +44090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996735177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4124975, y: -3.518, z: -11}
+  m_LocalPosition: {x: -9.9124975, y: -3.518, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436889771}
@@ -55402,7 +55402,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000059604645, y: 0.017848283}
+  m_Offset: {x: -0.008585788, y: 0.017848283}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -55413,7 +55413,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.46569657}
+  m_Size: {x: 0.23703738, y: 0.46569657}
   m_EdgeRadius: 0
 --- !u!114 &1655804198
 MonoBehaviour:
@@ -55830,7 +55830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxUse: 0
   cooldown: 0
-  itemSprite: {fileID: 21300020, guid: 39d678caa33990a4ca8841cbe3daa23c, type: 3}
+  itemSprite: {fileID: 21300000, guid: e6c3250aa42039942b178aa8a4c11c18, type: 3}
   barra: {fileID: 43348822}
   quantia: 0
   slotItem: 0
@@ -58221,7 +58221,7 @@ PrefabInstance:
     - target: {fileID: 5071709877902643275, guid: 1b313d76af7ab464a9943f5db796e5ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.24
+      value: -9.74
       objectReference: {fileID: 0}
     - target: {fileID: 5071709877902643275, guid: 1b313d76af7ab464a9943f5db796e5ac,
         type: 3}
@@ -58278,6 +58278,21 @@ PrefabInstance:
       propertyPath: birds
       value: 
       objectReference: {fileID: 8300000, guid: 1609fdfb5a0f4ca44af5a9ddcd57a178, type: 3}
+    - target: {fileID: 5071709877902643264, guid: 1b313d76af7ab464a9943f5db796e5ac,
+        type: 3}
+      propertyPath: walking
+      value: 
+      objectReference: {fileID: 8300000, guid: 27e24394036598348a2fe16dbc93123c, type: 3}
+    - target: {fileID: 5071709877902643264, guid: 1b313d76af7ab464a9943f5db796e5ac,
+        type: 3}
+      propertyPath: jumping
+      value: 
+      objectReference: {fileID: 8300000, guid: 705bf2062312afa46ab2d9e6f219d8b0, type: 3}
+    - target: {fileID: 5071709877902643264, guid: 1b313d76af7ab464a9943f5db796e5ac,
+        type: 3}
+      propertyPath: landing
+      value: 
+      objectReference: {fileID: 8300000, guid: a7119a1104afcff4887926be6df2e87d, type: 3}
     - target: {fileID: 5071709877902643279, guid: 1b313d76af7ab464a9943f5db796e5ac,
         type: 3}
       propertyPath: playerDies
@@ -58303,6 +58318,16 @@ PrefabInstance:
       propertyPath: barraDeAdrenalina
       value: 
       objectReference: {fileID: 53718230}
+    - target: {fileID: 5071709878527024629, guid: 1b313d76af7ab464a9943f5db796e5ac,
+        type: 3}
+      propertyPath: slash
+      value: 
+      objectReference: {fileID: 8300000, guid: cde923afcac9f7840a1b22f08c7779ab, type: 3}
+    - target: {fileID: 5071709878527024629, guid: 1b313d76af7ab464a9943f5db796e5ac,
+        type: 3}
+      propertyPath: killGuard
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b7a9192585d2504fbed0de889a067fb, type: 3}
     - target: {fileID: 6524202654759546754, guid: 1b313d76af7ab464a9943f5db796e5ac,
         type: 3}
       propertyPath: m_LocalPosition.z
