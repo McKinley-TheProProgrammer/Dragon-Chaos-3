@@ -8,7 +8,7 @@ public class PlayerDamage : MonoBehaviour
 {
     //Treme a tela
     public bool imortal;
-    
+    public AudioClip death;
     public GameManager playerDies;
     public CameraShake cameraShake;
     Rigidbody2D body;
@@ -34,7 +34,7 @@ public class PlayerDamage : MonoBehaviour
         if (playerDies)
         {
             playerDies.Coroutine();
-            playerDies.SfxPlayer();
+            playerDies.SfxPlayer(death);
         }
     }
     // Update is called once per frame

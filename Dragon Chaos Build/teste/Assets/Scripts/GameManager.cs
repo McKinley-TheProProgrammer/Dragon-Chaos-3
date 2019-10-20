@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
     public GameObject player,spawn;
     public GameObject camera;
-    public AudioClip death;
-
+    
+    
     private void Awake()
     {
         instance = this;
@@ -22,10 +22,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Destroyed());
 
     }
-    public void SfxPlayer()
+    public void SfxPlayer(AudioClip sfx)
     {
         AudioSource audio = GetComponent<AudioSource>();
-        audio.PlayOneShot(death);
+        sfx.frequency.Equals(Random.value);
+        audio.PlayOneShot(sfx);
     }
     public void CineEnabled()
     {

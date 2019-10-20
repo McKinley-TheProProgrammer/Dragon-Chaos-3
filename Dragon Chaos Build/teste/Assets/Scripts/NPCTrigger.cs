@@ -14,7 +14,7 @@ public class NPCTrigger : MonoBehaviour
     public bool podeFalar;
     public bool saiuDoCampo = false;
     public bool cineActive;
-
+    public bool notSpecialAnymore;
     public int npcIdentifier;
     void OnTriggerExit2D(Collider2D trigo)
     {
@@ -42,6 +42,7 @@ public class NPCTrigger : MonoBehaviour
                 if(cineActive == false)
                 {
                     Debug.Log("LOOG");
+                    notSpecialAnymore = false;
                     cineActive = true;
                     //FindObjectOfType<DialogueManager>().cutscene.CineEnabled();
                     //GameManager.Instance.CineEnabled();

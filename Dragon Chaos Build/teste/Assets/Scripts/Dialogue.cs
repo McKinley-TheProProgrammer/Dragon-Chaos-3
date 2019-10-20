@@ -8,7 +8,7 @@ public class Dialogue {
 
     public string nome;
     [TextArea(4, 10)]
-    public string[,] sentencas = new string[2, 2] { { "Morgana", "a" },{ "a", "a" }};
+    public string[] sentencas;
    
 	
 }

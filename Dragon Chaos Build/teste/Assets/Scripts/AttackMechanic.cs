@@ -60,7 +60,7 @@ public class AttackMechanic : MonoBehaviour
 
             iTween.PunchScale(collision.gameObject,new Vector2(6,8),1);
             iTween.ColorTo(collision.gameObject,new Color(0,0,0,0),.5f);
-
+            collision.gameObject.GetComponentInChildren<EnemyAttack>().enabled = false;
             Destroy(collision.gameObject,.5f);
         }
         /*if (collision.gameObject.CompareTag(strongerEnemyTag))

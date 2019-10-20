@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FollowTarget : MonoBehaviour
 {
-    public float velocidade = 6f;
+    public float velocidade;
     public float pararDist;
     public float recuarDist;
-    public GameObject range;
+    //public GameObject range;
     public Transform seguirAlvo;
     //Checa se tem um buraco
     public Transform edge;
@@ -35,23 +35,26 @@ public class FollowTarget : MonoBehaviour
         isOnGround = Physics2D.OverlapCircle(edge.position, raioDoCanto, whereIsEdge);
         if (seguirAlvo != null)
         {
+            //Debug.Log(seguirAlvo);
             if (transform.position.x > player.position.x)
             {
+               // Debug.Log(transform.position.x + " VS " + player.position.x);
                 flipa.flipX = true;
             }
             else
             {
+               // Debug.Log(flipa.flipX);
                 flipa.flipX = false;
             }
-            if (isAttacking)
+            /*if (isAttacking)
             {
                 return;
-            }
+            }*/
             //Debug.Log("The Fim");
             if(CheckRange() && isOnGround)
             {
                 //anim.SetBool("EnemySpotted",true);
-                
+                Debug.Log(CheckRange());
                 transform.position = Vector2.MoveTowards(transform.position, seguirAlvo.position, velocidade * Time.deltaTime);
             }
             else if (Vector2.Distance(transform.position, seguirAlvo.position) < pararDist && Vector2.Distance(transform.position, seguirAlvo.position) > recuarDist && isOnGround)
@@ -60,7 +63,7 @@ public class FollowTarget : MonoBehaviour
             }
             else if (Vector2.Distance(transform.position, seguirAlvo.position) < recuarDist && isOnGround)
             {
-                transform.position = Vector2.MoveTowards(transform.position, seguirAlvo.position, -velocidade * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, seguirAlvo.position, -velocidade*Time.deltaTime);
             }
         }
     }

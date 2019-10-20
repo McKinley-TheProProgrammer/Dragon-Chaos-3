@@ -12,8 +12,8 @@ public class DialogueManager : MonoBehaviour {
     public Text textoNome;
     public Text textoDialogo;
     public GameObject player;
-    public NPCTrigger quemFala;
-
+    public NPCTrigger[] quemFala, special;
+    
     public int npcPoint;
     private Queue<string> sentencas;
 	// Use this for initialization
@@ -54,22 +54,22 @@ public class DialogueManager : MonoBehaviour {
             return; 
         }*/
         //player.GetComponent<PlayerMovement>().activatePhys += 1;
-        switch (sentencas.Count)
+        if (special[0] && !special[0].GetComponent<NPCTrigger>().notSpecialAnymore)
         {
-            case 3:
-                GameManager.Instance.CineEnabled();
-                break;
-            
+            switch (sentencas.Count)
+            {
+
+                case 3:
+                    GameManager.Instance.CineEnabled();
+                    break;
+
+            }
         }
 
         if (sentencas.Count == 0)
         {
-            if (npcPoint != 0)
-                EndDialogo(npcPoint);
-            else if (npcPoint == 0)
-                EndDialogo(npcPoint++);
-
-            //EndDialogo(npcPoint++);
+            EndDialogo(npcPoint);
+           //EndDialogo(npcPoint++);
             return;
         }
         string sentenda = sentencas.Dequeue();
@@ -88,8 +88,7 @@ public class DialogueManager : MonoBehaviour {
     }
     public void EndDialogo(int npcPointer)
     {
-        quemFala.GetComponent<NPCTrigger>().saiuDoCampo = true;
-
+        special[0].GetComponent<NPCTrigger>().notSpecialAnymore = true;
         GameManager.Instance.CineDisabled();
         
         player.GetComponent<PlayerMovement>().inDialog = false;

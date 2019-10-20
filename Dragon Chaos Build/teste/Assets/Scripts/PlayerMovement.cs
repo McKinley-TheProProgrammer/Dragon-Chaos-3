@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public AudioClip birds;
 
-    float velocity = 136f;
+    float velocity = 4.5f;
     float jumpForce = 400f;
     Rigidbody2D body;
     Animator anim;
     SpriteRenderer flipa;
-
+    
     bool isAttacking;
     bool moving = true;
     public bool inDialog = false;
@@ -66,6 +67,11 @@ public class PlayerMovement : MonoBehaviour
             body.isKinematic = false;
         }
     }*/
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("AudioTrigger"))
+            GameManager.Instance.SfxPlayer(birds);
+    }
 
 
     void Update()
@@ -80,8 +86,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        float x = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(x * velocity * Time.deltaTime, body.velocity.y);
+        float x = Input.GetAxisRaw("Horizontal");
+        body.velocity = new Vector2(x * velocity, body.velocity.y);
         if (Input.GetKeyDown(KeyCode.W) && isOnLand == true)
         {
             anim.SetTrigger("Jumper");

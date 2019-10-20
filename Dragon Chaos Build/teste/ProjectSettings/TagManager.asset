@@ -12,6 +12,8 @@ TagManager:
   - Ground_Grass
   - ColisionDeath
   - Camera
+  - AudioTrigger
+  - Parede
   layers:
   - Default
   - TransparentFX
