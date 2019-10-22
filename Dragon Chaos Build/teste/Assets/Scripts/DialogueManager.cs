@@ -59,8 +59,8 @@ public class DialogueManager : MonoBehaviour {
             switch (sentencas.Count)
             {
 
-                case 3:
-                    GameManager.Instance.CineEnabled();
+                case 4:
+                    GameManager.Instance.CineEnabled(GameManager.Instance.camera[0]);
                     break;
 
             }
@@ -89,8 +89,9 @@ public class DialogueManager : MonoBehaviour {
     public void EndDialogo(int npcPointer)
     {
         special[0].GetComponent<NPCTrigger>().notSpecialAnymore = true;
-        GameManager.Instance.CineDisabled();
-        
+        GameManager.Instance.CineDisabled(GameManager.Instance.camera[0]);
+        GameManager.Instance.CineDisabled(GameManager.Instance.camera[1]);
+        GameManager.Instance.CineDisabled(GameManager.Instance.camera[2]);
         player.GetComponent<PlayerMovement>().inDialog = false;
         textname.SetActive(false);
         textdialog.SetActive(false);

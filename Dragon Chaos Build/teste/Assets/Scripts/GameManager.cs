@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
     public GameObject player,spawn;
-    public GameObject camera;
+    public GameObject[] camera;
     
     
     private void Awake()
@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour
         sfx.frequency.Equals(Random.value);
         audio.PlayOneShot(sfx);
     }
-    public void CineEnabled()
+    public void CineEnabled(GameObject camera)
     {
         camera.SetActive(true);
     }
-    public void CineDisabled()
+    public void CineDisabled(GameObject camera)
     {
         camera.SetActive(false);
     }

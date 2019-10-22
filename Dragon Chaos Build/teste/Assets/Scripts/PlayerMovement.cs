@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public AudioClip birds;
+    public AudioClip[] birds = new AudioClip[3];
     public AudioClip walking,jumping,landing;
     float velocity = 4.5f;
     float jumpForce = 400f;
@@ -85,7 +85,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("AudioTrigger"))
-            GameManager.Instance.SfxPlayer(birds);
+            GameManager.Instance.SfxPlayer(birds[0]);
+        if (collision.gameObject.CompareTag("AudioTrigger2"))
+            GameManager.Instance.SfxPlayer(birds[1]);
+        if (collision.gameObject.CompareTag("AudioTrigger3"))
+            GameManager.Instance.SfxPlayer(birds[2]);
     }
 
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1394267730}
   - component: {fileID: 1394267732}
   - component: {fileID: 1394267731}
+  - component: {fileID: 7583802581306714991}
   m_Layer: 12
   m_Name: AttackEnemy
   m_TagString: Untagged
@@ -70,15 +71,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18835224406c9074e95b10aacfb3f6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
+  slashEnemy: {fileID: 8300000, guid: cde923afcac9f7840a1b22f08c7779ab, type: 3}
+  isInRangeLeft: 0
+  isInRangeRight: 0
   enabledAttack: 0
-  timer: 1.5
+  timer: 2
   posAtaque: {fileID: 1394267730}
   raioDeAtaque: 0.82
-  colisor: {fileID: 1394267732}
+  colisorDireita: {fileID: 1394267732}
+  colisorEsquerda: {fileID: 7583802581306714991}
   enemies:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!61 &7583802581306714991
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394267729}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.59, y: 0.04}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.59}
+  m_EdgeRadius: 0
 --- !u!1 &5969751329456482304
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +252,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
@@ -243,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791c99907f5ba244bb322d8bbf98e4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 2
+  velocidade: 1.5
   pararDist: 0.4
   recuarDist: 0.05
   seguirAlvo: {fileID: 0}
@@ -254,6 +284,7 @@ MonoBehaviour:
     m_Bits: 256
   isOnGround: 0
   atackscript: {fileID: 1394267731}
+  enemyRange: 16
   player: {fileID: 5071709877902643275, guid: 1b313d76af7ab464a9943f5db796e5ac, type: 3}
 --- !u!1 &7468083058895997858
 GameObject:

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.14, y: 2.19}
-  m_SizeDelta: {x: 155.13, y: 96.611}
+  m_AnchoredPosition: {x: 0.11, y: 2.44}
+  m_SizeDelta: {x: 95.193, y: 107.359}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1038664462
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 91ca25dc322523343bb037ebea04b53f, type: 3}
-    m_FontSize: 36
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -265,7 +265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c51af516e2d9714184bf1f5eb5209bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birds: {fileID: 8300000, guid: 1609fdfb5a0f4ca44af5a9ddcd57a178, type: 3}
+  birds:
+  - {fileID: 8300000, guid: 1609fdfb5a0f4ca44af5a9ddcd57a178, type: 3}
+  - {fileID: 8300000, guid: 34ca925ea0e9c05418d98b97ac384d4f, type: 3}
+  - {fileID: 8300000, guid: 6ccd4b65c76bcdf4e9d70d6be3364753, type: 3}
   walking: {fileID: 8300000, guid: 27e24394036598348a2fe16dbc93123c, type: 3}
   jumping: {fileID: 8300000, guid: 705bf2062312afa46ab2d9e6f219d8b0, type: 3}
   landing: {fileID: 8300000, guid: a7119a1104afcff4887926be6df2e87d, type: 3}
@@ -423,6 +426,7 @@ MonoBehaviour:
   strongerEnemyTag: 
   enemyTraces: {fileID: 5700073157102809121, guid: 7c74ea40208dddc47bcb4371bed996b7,
     type: 3}
+  traces: {fileID: 0}
   posicoesNegativadas: {x: -6, y: 7.1, z: 0}
 --- !u!61 &264642091
 BoxCollider2D:

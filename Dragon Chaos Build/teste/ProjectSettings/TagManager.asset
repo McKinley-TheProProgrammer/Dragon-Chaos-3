@@ -14,6 +14,11 @@ TagManager:
   - Camera
   - AudioTrigger
   - Parede
+  - AudioTrigger2
+  - AudioTrigger3
+  - Camera2
+  - NPCAutomatico
+  - ColissionInstruction
   layers:
   - Default
   - TransparentFX
