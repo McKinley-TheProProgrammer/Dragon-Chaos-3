@@ -16,6 +16,9 @@ public class AttackMechanic : MonoBehaviour
     public string strongerEnemyTag;
     int danoSET = 3;
     public ParticleSystem enemyTraces;
+    public Pooling traces;
+    public Vector3 posicoesNegativadas;
+    
     bool canAttack;
     // Start is called before the first frame update
     void Start()
@@ -65,14 +68,34 @@ public class AttackMechanic : MonoBehaviour
         if (collision.gameObject.CompareTag(enemyTag))
         {
             barraDeAdrenalina.fillAmount += 0.08f;
-            Instantiate(enemyTraces, transform.position, Quaternion.identity);
-
+            if (GetComponentInParent<SpriteRenderer>().flipX == false)
+            {
+                GameObject podeUsar = traces.GetPooledObject();
+                if (podeUsar != null)
+                {
+                    podeUsar.transform.position = transform.position;
+                    podeUsar.SetActive(true);
+                }
+                Instantiate(enemyTraces, collision.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                GameObject podeUsar = traces.GetPooledObject();
+                if (podeUsar != null)
+                {
+                    podeUsar.transform.position = transform.position;
+                    podeUsar.SetActive(true);
+                }
+                Instantiate(enemyTraces, collision.transform.position, Quaternion.identity);
+                enemyTraces.velocityOverLifetime.x.Equals(-posicoesNegativadas);
+            }
             //collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             //collision.gameObject.GetComponent<BoxCollider2D>().enabled = true;
             GameManager.Instance.SfxPlayer(killGuard);
             iTween.PunchScale(collision.gameObject,new Vector2(6,8),1);
             iTween.ColorTo(collision.gameObject,new Color(0,0,0,0),.5f);
             collision.gameObject.GetComponentInChildren<EnemyAttack>().enabled = false;
+            
             Destroy(collision.gameObject,.5f);
         }
         /*if (collision.gameObject.CompareTag(strongerEnemyTag))

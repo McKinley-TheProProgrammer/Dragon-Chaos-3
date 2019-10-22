@@ -75,12 +75,14 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\LifeTime.cs" />
     <Compile Include="Assets\Scripts\NPCTrigger.cs" />
+    <Compile Include="Assets\Scripts\Particle.cs" />
     <Compile Include="Assets\Scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Pocao.cs" />
     <Compile Include="Assets\Scripts\PocaoAdrena.cs" />
     <Compile Include="Assets\Scripts\PocaoMana.cs" />
     <Compile Include="Assets\Scripts\PocaoStamina.cs" />
+    <Compile Include="Assets\Scripts\Pooling.cs" />
     <Compile Include="Assets\Scripts\RangeCheck.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Reference Include="Cinemachine">

@@ -71,6 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  enabledAttack: 0
+  timer: 1.5
   posAtaque: {fileID: 1394267730}
   raioDeAtaque: 0.82
   colisor: {fileID: 1394267732}

@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public bool isInRange;
+    public bool enabledAttack;
+    public float timer;
     public Transform posAtaque;
     public float raioDeAtaque;
     public BoxCollider2D colisor;
@@ -13,6 +15,7 @@ public class EnemyAttack : MonoBehaviour
     Animator ataque;
     void Start()
     {
+        enabledAttack = true;
         colisor.enabled = false;
         ataque = GetComponentInParent<Animator>();
     }
@@ -28,10 +31,27 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
+        
         isInRange = Physics2D.OverlapCircle(posAtaque.position, raioDeAtaque,enemies);
         if (isInRange)
         {
-            ataque.SetTrigger("Attack");
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                enabledAttack = true;
+                timer = 1.5f;
+
+            }
+            /*if (!enabledAttack)
+            {
+                timer -= Time.deltaTime;
+            }*/
+            if (enabledAttack)
+            {
+                ataque.SetTrigger("Attack");
+                enabledAttack = false;
+            }
+            
         }
     }
     public void TurnColliderOn()
