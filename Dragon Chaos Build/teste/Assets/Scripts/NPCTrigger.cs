@@ -20,7 +20,7 @@ public class NPCTrigger : MonoBehaviour
     {
         instrucao.SetActive(false);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D trigo)
     {
         instrucao.SetActive(true);
     }

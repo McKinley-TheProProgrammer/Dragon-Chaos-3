@@ -76,7 +76,7 @@ public class AttackMechanic : MonoBehaviour
                     podeUsar.transform.position = transform.position;
                     podeUsar.SetActive(true);
                 }
-                Instantiate(enemyTraces, collision.transform.position, Quaternion.identity);
+                //Instantiate(enemyTraces, collision.transform.position, Quaternion.identity);
             }
             else
             {
@@ -86,7 +86,7 @@ public class AttackMechanic : MonoBehaviour
                     podeUsar.transform.position = transform.position;
                     podeUsar.SetActive(true);
                 }
-                Instantiate(enemyTraces, collision.transform.position, Quaternion.identity);
+                //Instantiate(enemyTraces, collision.transform.position, Quaternion.identity);
                 enemyTraces.velocityOverLifetime.x.Equals(-posicoesNegativadas);
             }
             //collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;

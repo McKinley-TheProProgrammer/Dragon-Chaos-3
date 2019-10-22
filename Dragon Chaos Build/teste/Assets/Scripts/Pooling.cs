@@ -9,7 +9,7 @@ public class Pooling : MonoBehaviour
 
     List<GameObject> listOfDeactivatedParticles = new List<GameObject>();
 
-    public bool vaiCrescer = true;
+    public bool vaiCrescer;
     // Start is called before the first frame update
     void Start()
     {
