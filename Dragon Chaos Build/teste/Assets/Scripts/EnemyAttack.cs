@@ -34,9 +34,9 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
-        
+        //(new Vector2(posAtaque.localPosition.x + (posAtaque.localPosition.x* -33), posAtaque.position.y), raioDeAtaque, enemies);
         isInRangeLeft = Physics2D.OverlapCircle(posAtaque.position, raioDeAtaque, enemies);
-        isInRangeRight = Physics2D.OverlapCircle(new Vector2(posAtaque.localPosition.x + (posAtaque.localPosition.x * -33), posAtaque.position.y), raioDeAtaque, enemies);
+        isInRangeRight = Physics2D.OverlapCircle(new Vector2(-posAtaque.position.x, posAtaque.position.y), raioDeAtaque, enemies);
         
         if (isInRangeLeft || isInRangeRight)
         {
@@ -80,4 +80,5 @@ public class EnemyAttack : MonoBehaviour
         Gizmos.DrawWireSphere(posAtaque.position, raioDeAtaque);
         Gizmos.DrawWireSphere(new Vector3(posAtaque.localPosition.x + (posAtaque.localPosition.x * -33), posAtaque.position.y, posAtaque.position.z), raioDeAtaque);
     }
+    
 }

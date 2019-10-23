@@ -1357,6 +1357,10 @@ PrefabInstance:
       propertyPath: velocidade
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemyRange
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_Layer
@@ -41978,6 +41982,10 @@ PrefabInstance:
       propertyPath: velocidade
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemyRange
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_Layer
@@ -43282,6 +43290,10 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: velocidade
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemyRange
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
@@ -55090,6 +55102,10 @@ PrefabInstance:
       propertyPath: velocidade
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemyRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_Layer
@@ -55873,17 +55889,11 @@ MonoBehaviour:
   dialogo:
     nome: Senhora e Morgana
     sentencas:
-    - OI
-    - OI
-    - VSf
+    - '.......!?'
+    - Onde Estou!?
+    - "T\xE1 um caos aqui, em Vooeid\xED, senhora... Tem esses guarda que t\xE3o matando
+      qualquer um esteja na frente."
     - Tchau
-    - Babyyyyyyy
-    - Babyyyyyyy
-    - Babyyyyyyy
-    - Babyyyyyyy
-    - Babyyyyyyy
-    - Babyyyyyyy
-    - Babyyyyyyy
     - Babyyyyyyy
     - Babyyyyyyy
     - Babyyyyyyy
@@ -58635,6 +58645,10 @@ PrefabInstance:
       propertyPath: velocidade
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemyRange
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8538358266251076672, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_Layer
@@ -59032,6 +59046,10 @@ PrefabInstance:
       propertyPath: seguirAlvo
       value: 
       objectReference: {fileID: 848122771}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: enemyRange
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482318, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
       propertyPath: m_FlipX

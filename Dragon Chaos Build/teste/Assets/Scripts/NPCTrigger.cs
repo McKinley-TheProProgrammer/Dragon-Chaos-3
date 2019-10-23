@@ -48,8 +48,9 @@ public class NPCTrigger : MonoBehaviour
         {
             Conversa();
             GameManager.Instance.CineEnabled(GameManager.Instance.camera[1]);
-           
+            
             instrucao.GetComponent<Text>().text = "APERTE 'Z' PARA ATACAR";
+            trigo.enabled = false;
         }
         if (gameObject.tag == "ColissionInstruction" && trigo.gameObject.CompareTag("Player"))
         {

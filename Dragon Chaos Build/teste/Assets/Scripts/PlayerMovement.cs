@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
 
         float x = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(x * velocity, body.velocity.y);
-        if (Input.GetKeyDown(KeyCode.W) && isOnLand == true)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isOnLand == true)
         {
             anim.SetTrigger("Jumper");
             body.AddForce(new Vector2(0, jumpForce));
