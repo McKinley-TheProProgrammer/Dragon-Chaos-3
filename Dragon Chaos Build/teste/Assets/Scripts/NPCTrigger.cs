@@ -38,6 +38,7 @@ public class NPCTrigger : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D trigo)
     {
+        GetComponent<BoxCollider2D>().enabled = false;
         instrucao.GetComponent<Text>().text = "APERTE F";
         instrucao.SetActive(false);
     }
@@ -50,7 +51,6 @@ public class NPCTrigger : MonoBehaviour
             GameManager.Instance.CineEnabled(GameManager.Instance.camera[1]);
             
             instrucao.GetComponent<Text>().text = "APERTE 'Z' PARA ATACAR";
-            trigo.enabled = false;
         }
         if (gameObject.tag == "ColissionInstruction" && trigo.gameObject.CompareTag("Player"))
         {

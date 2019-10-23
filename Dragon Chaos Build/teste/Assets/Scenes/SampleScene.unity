@@ -55893,10 +55893,10 @@ MonoBehaviour:
     - Onde Estou!?
     - "T\xE1 um caos aqui, em Vooeid\xED, senhora... Tem esses guarda que t\xE3o matando
       qualquer um esteja na frente."
-    - Tchau
-    - Babyyyyyyy
-    - Babyyyyyyy
-    - Babyyyyyyy
+    - "Mas o que houve com Aplist\xEDa?"
+    - "Caiu, senhora... O Rei Aaron morreu, e Sk\xF3ni est\xE1 invadindo tudo!"
+    - "N\xE3o... N\xE3o \xE9 poss\xEDvel... "
+    - '...'
   player: {fileID: 848122768}
   podeFalar: 0
   saiuDoCampo: 0
@@ -56914,7 +56914,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 627d5fe1f11a17c439f3d1fd011631f8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e509f243621b0454ea984a74ac9d1862, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -59049,6 +59049,10 @@ PrefabInstance:
     - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
       propertyPath: enemyRange
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118654600, guid: edae3240de1e35845ad506668eb17167, type: 3}
+      propertyPath: raioDoCanto
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 5969751329456482318, guid: edae3240de1e35845ad506668eb17167,
         type: 3}
