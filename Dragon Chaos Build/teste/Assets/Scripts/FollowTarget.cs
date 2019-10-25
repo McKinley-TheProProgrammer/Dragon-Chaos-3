@@ -43,7 +43,7 @@ public class FollowTarget : MonoBehaviour
             }
             else
             {
-               // Debug.Log(flipa.flipX);
+               //Debug.Log(flipa.flipX);
                 flipa.flipX = false;
             }
             /*if (isAttacking)

@@ -90,7 +90,7 @@ public class AttackMechanic : MonoBehaviour
                 enemyTraces.velocityOverLifetime.x.Equals(-posicoesNegativadas);
             }
             //collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            //collision.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             GameManager.Instance.SfxPlayer(killGuard);
             iTween.PunchScale(collision.gameObject,new Vector2(6,8),1);
             iTween.ColorTo(collision.gameObject,new Color(0,0,0,0),.5f);
